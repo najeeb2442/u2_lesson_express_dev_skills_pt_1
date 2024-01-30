@@ -6,8 +6,15 @@
   <title>Document</title>
 </head>
 <body style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-  <h3><%= skills.name %></h3>
-  <h3>Expert: <%= skills.expert ? 'Yes' : 'No' %></h3>
-  <h3>Description: <%= skills.description  %></h3>
+  <h3><%= skill.name %></h3>
+  <h3>Expert: <%= skill.expert ? 'Yes' : 'No' %></h3>
+  <h3>Description: <%= skill.description  %></h3>
+
+<form action="/skills/<%= skill.id %>?_method=DELETE" method="post">
+<button type="submit">DELETE</button>
+</form>
+<form action="/skills/<%= skill.id %>/edit" method="get">
+  <button type="submit">edit</button>
+  </form>
 </body>
 </html>

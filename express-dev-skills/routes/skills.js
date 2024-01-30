@@ -9,6 +9,14 @@ const skillsController = require("../controllers/skills")
 
 router.get("/", skillsController.index)
 
+router.get("/new", skillsController.newSkill)
+router.post("/new", skillsController.create)
+
+router.delete("/:id", skillsController.deleteSkill)
+//edit
+router.get("/:id/edit", skillsController.editPage)
+router.put("/:id", skillsController.updateSkill)
+
 router.get("/:id", skillsController.show)
 
 module.exports = router

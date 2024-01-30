@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+  <h3> Skill Name </h3>
+<form action="/skills/<%= skill.id  %>?_method=PUT" method="post">
+<div>
+  <label for="">name : </label><input type="text" name="name" value="<%= skill.name %>" >
+</div>
+<div>
+  <label for="">description : </label><input type="text" name="description" value="<%= skill.description %>" >
+</div>
+<div>
+  <label for="">Expert : </label><input type="checkbox" name="expert" value="<%= skill.expert %>" >
+</div>
+<button type="submit" >UPDATE!</button>
+</form>
+</body>
+</html>
