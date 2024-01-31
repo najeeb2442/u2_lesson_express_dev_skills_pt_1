@@ -31,7 +31,7 @@ const editPage = (req, res) => {
 
 const updateSkill = (req, res) => {
   skillModel.updateSkill(req.body, req.params.id)
-  res.redirect("/skills")
+  show(req, res)
 }
 
 module.exports = {
